@@ -17,3 +17,4 @@ jobs:
       - name: Install terraform
         uses: hashicorp/setup-terraform@v1
       - run: terraform version
+      - run: echo "$AWS_DEFAULT_REGION"
