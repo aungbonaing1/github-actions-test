@@ -18,6 +18,6 @@ jobs:
       - name: Install terraform
         uses: hashicorp/setup-terraform@v1
       - run: terraform version
-      - run: example-command "$SUPER_SECRET"
+      - run: echo "$PATH"
 
 
