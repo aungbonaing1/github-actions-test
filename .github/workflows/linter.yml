@@ -12,7 +12,7 @@ jobs:
     # Set the type of machine to run on
     runs-on: ubuntu-latest
     env: # Or as an environment variable
-      aws_region: ${{ secrets.TF.AWS_DEFAULT_REGION }}
+      aws_region: ${{ PATH }}
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Install terraform
