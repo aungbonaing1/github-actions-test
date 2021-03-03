@@ -13,8 +13,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Set Env
+        env: # Or as an environment variable
+          aws_region: ${{ secrets.AWS_DEFAULT_REGION }}
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Install terraform
         uses: hashicorp/setup-terraform@v1
       - run: terraform version
-      - run: echo "$AWS_DEFAULT_REGION"
+      - run: echo "$aws_region"
+
