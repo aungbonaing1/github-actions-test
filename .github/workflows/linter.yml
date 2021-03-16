@@ -11,16 +11,18 @@ jobs:
     name: Lint code base
     # Set the type of machine to run on
     runs-on: ubuntu-latest
-    env: # Or as an environment variable
-      AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
-      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     steps:
-      - uses: actions/checkout@v2
-      # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Install terraform
-        uses: hashicorp/setup-terraform@v1
-      - run: terraform version
-      - run: terraform init
-      - run: terraform plan
-      - run: terraform apply -auto-approve
+      - run: echo "asdf" > knownhosts
+#     env: # Or as an environment variable
+#       AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+#       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#     steps:
+#       - uses: actions/checkout@v2
+#       # Checks out a copy of your repository on the ubuntu-latest machine
+#       - name: Install terraform
+#         uses: hashicorp/setup-terraform@v1
+#       - run: terraform version
+#       - run: terraform init
+#       - run: terraform plan
+#       - run: terraform apply -auto-approve
