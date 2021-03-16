@@ -12,7 +12,8 @@ jobs:
     # Set the type of machine to run on
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'asdf' > knownhosts
+      - run:  |
+          echo 'asdf' > knownhosts
 #     env: # Or as an environment variable
 #       AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
 #       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
